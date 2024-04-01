@@ -1,0 +1,10 @@
++-------------------------------------+
+|             BillCalculator          |
++-------------------------------------+
+| -applyEmployeeDiscount(amount: double): double |
+| -applyAffiliateDiscount(amount: double): double |
+| -applyCustomerDiscount(amount: double): double |
+| -applyAmountDiscount(amount: double): double |
+| -applyGroceryDiscount(amount: double): double |
++-------------------------------------+
+
