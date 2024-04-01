@@ -31,7 +31,6 @@ You can run the tests to verify the functionality and generate code coverage rep
 java -cp .:junit-platform-console-standalone-1.8.2.jar org.junit.platform.console.ConsoleLauncher --class-path . --scan-class-path
 ```
 
-
 # Exercise 2
 
 # Financial Institution X
@@ -119,8 +118,8 @@ Financial Institution X’s Omni Channel product, while also addressing the core
 * **Vendor Connectivity Management:**  API Gateway can handle vendor connectivity and provide features like
   authentication, authorization, throttling, and monitoring.
 
-* **API Design and Documentation:** The vendor APIs will/should be designed using a RESTful approach and documented using
-  OpenAPI Specification (OAS or Swagger). This will allow vendors to easily integrate with the system.
+* **API Design and Documentation:** The vendor APIs will/should be designed using a RESTful approach and documented
+  using OpenAPI Specification (OAS or Swagger). This will allow vendors to easily integrate with the system.
 
 * **Architecture Components:** An API Gateway can manage vendor access and authorization by implementing policies based
   on API keys, digital certificates, or other mechanisms.
@@ -153,25 +152,25 @@ Financial Institution X’s Omni Channel product, while also addressing the core
   Gateway.
 
 **Java Implementation**
-While the above solution focuses on the high-level design, as a tech lead the implementation can leverage Java with frameworks like
-Spring Boot for developing the web channel and vendor APIs. Spring Security can be used for implementing authentication
-and authorization.
+While the above solution focuses on the high-level design, as a tech lead the implementation can leverage Java with
+frameworks like Spring Boot for developing the web channel and vendor APIs. Spring Security can be used for implementing
+authentication and authorization.
 
 This is a high-level overview and would require further detailed design and implementation to fully address all the
 requirements.
 
 #### Updated version of the system Architecture
 
-![Alt text](./Omni Channe Sys Eng.png)
-
+![Alt text](Omni Channe Sys Eng.png)
 
 **My Explanation:**
+
 * The client device vould be any of the mechanisms stated in the client diagram.
 * The client interact with the Omni Channel product through the API Gateway using a RESTful API.
-* The API Gateway remains responsible for routing requests and responses between the
-Web Application and the Omni Channel product.
-* The diagram shows a arrow lines from throughout the implementation showing where connection 
-is coming from and where it's going to
+* The API Gateway remains responsible for routing requests and responses between the Web Application and the Omni
+  Channel product.
+* The diagram shows a arrow lines from throughout the implementation showing where connection is coming from and where
+  it's going to
 * The implementation show how the ESB will flow into the implementation when the freeze is lifted.
 * A caching mechanism was been set in place to manage and reduce request time to the database
 
