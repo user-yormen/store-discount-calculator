@@ -54,57 +54,36 @@ java -cp .:junit-platform-console-standalone-1.8.2.jar org.junit.platform.consol
 3. Reduce MIPS on Core
 4. Strategic Roadmap for Omni-channel Product
 
-### Add a Web Channel
+**Web Channel**
+Based on the information here’s a high-level design for adding a web channel and vendor channel with APIs to the
+Financial Institution X’s Omni Channel product, while also addressing the core system MIPS reduction using caching:
 
-##### Web Model:
-
+* **Web Model:**
 For an Omni Channel experience, a Single Page Application (SPA) model would be the best choice as it provides a seamless
 and responsive user experience across different devices and platforms.
 
-#### Architecture Diagram with Web Channel Connectivity:
-
+* **Architecture Diagram with Web Channel Connectivity:**
 The Web Channel can connect to the Gateway using secure protocols like HTTPS. The Gateway will handle authentication,
-authorization, and routing of requests to the Omni Channel Backend.
+authorization, and routing of requests to the Omni Channel Backend. 
 
-#### Authentication/Authorization Implications:
+* **Updated version of the system Architecture**
 
+![Alt text](Omni Channe Sys Eng.png)
+![Alt text](https://github.com/user-yormen/store-discount-calculator/blob/eaeb49a46653b0ee49c9820d0c6c788ac58df3a8/Omni%20Channe%20Sys%20Eng.png)
+
+* **Authentication/Authorization Implications:**
 The Web Channel will need to implement authentication mechanisms like OAuth 2.0, OpenID Connect, or similar protocols to
 authenticate users and obtain access tokens. The Gateway will handle token validation and authorization based on user
 roles and permissions.
 
-#### Omni-channel Experience:
-
+* **Omni-channel Experience:**
 With a SPA model and proper synchronization of user data and state across channels, the Web Channel can provide an
 Omni-channel experience seamlessly.
 
-#### Performance Implications and Mitigation:
-
+* **Performance Implications and Mitigation:**
 Adding a new channel can increase the load on the backend systems. To mitigate performance issues, caching mechanisms
 can be implemented at the Gateway or Web Channel level. Load balancing and horizontal scaling of the Web Channel and
-Gateway components can also help distribute the load.
-`
-
-Based on the information here’s a high-level design for adding a web channel and vendor channel with APIs to the
-Financial Institution X’s Omni Channel product, while also addressing the core system MIPS reduction using caching:
-
-**Web Channel**
-
-* **Web Model:** A Responsive Web Application (RWA) would be the best choice for the web channel. RWA adapts its layout
-  to the device being used, providing an optimal viewing experience on any device (desktop, mobile, tablet).
-
-* **Architecture Update:** The web channel will connect to the Omni Channel product through the Gateway. The Gateway
-  will be responsible for authentication and authorization of the web channel requests.
-
-* **Authentication/Authorization:**  Web users will need to be authenticated and authorized to access the web channel.
-  This can be achieved using Single Sign-On (SSO) with the existing mobile app authentication mechanism.
-
-* **Omni-Channel Experience:** The RWA should provide a consistent user experience across all channels
-  (mobile app and web). This can be achieved by using a shared user interface (UI) framework and back-end services.
-
-* **Performance Implications:** Adding a new channel can increase the load on the Omni Channel product and back-end
-  systems. To mitigate this, consider:
-    * Load balancing techniques to distribute traffic across multiple instances of the Omni Channel product.
-    * Caching static content (e.g., images, CSS, JavaScript) to reduce the number of requests to the server.
+Gateway components can also help distribute the load. We can also implement caching static content (e.g., images, CSS, JavaScript) to reduce the number of requests to the server.
 
 **Vendor Channel and APIs**
 
@@ -159,11 +138,6 @@ authentication and authorization.
 This is a high-level overview and would require further detailed design and implementation to fully address all the
 requirements.
 
-#### Updated version of the system Architecture
-
-![Alt text](Omni Channe Sys Eng.png)
-![Alt text](https://github.com/user-yormen/store-discount-calculator/blob/eaeb49a46653b0ee49c9820d0c6c788ac58df3a8/Omni%20Channe%20Sys%20Eng.png)
-
 **My Explanation:**
 
 * The client device vould be any of the mechanisms stated in the client diagram.
@@ -173,5 +147,5 @@ requirements.
 * The diagram shows a arrow lines from throughout the implementation showing where connection is coming from and where
   it's going to
 * The implementation show how the ESB will flow into the implementation when the freeze is lifted.
-* A caching mechanism was been set in place to manage and reduce request time to the database
+* A caching mechanism was been set in place to manage and reduce request time
 
