@@ -162,6 +162,7 @@ requirements.
 #### Updated version of the system Architecture
 
 ![Alt text](Omni Channe Sys Eng.png)
+![Alt text](https://github.com/user-yormen/store-discount-calculator/blob/eaeb49a46653b0ee49c9820d0c6c788ac58df3a8/Omni%20Channe%20Sys%20Eng.png)
 
 **My Explanation:**
 
